@@ -1,11 +1,9 @@
 # Dotfiles
-
 if [ -d "$HOME/dotfiles" ]; then
   alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 fi
 
 # Generic Files and Apps
-
 if [ $(which nvim) ]; then
   alias vim='nvim'
 fi
@@ -22,3 +20,31 @@ if [ $(which xclip) ]; then
   alias setclip="xclip -selection c"
   alias getclip="xclip -selection c -o"
 fi
+
+# Strip comments
+alias eel='grep -v "^\s*[#\;]\|^\s*$"'
+
+# Aliases for Git
+alias gst="git status"
+alias grv="git remote -v"
+alias gdlc="git diff HEAD~1 HEAD"
+
+# Aliases for Ansible
+alias ap="ansible-playbook"
+alias acl="ansible-config list"
+alias ail="ansible-inventory --list"
+alias aig="ansible-inventory --graph"
+
+# Aliases for Vagrant
+alias vs="vagrant status"
+alias vu="vagrant up"
+alias vdf="vagrant destroy --force"
+alias vss="vagrant ssh"
+
+# Aliases for Docker
+alias dcpsa="docker container ps -a"
+alias d-c="docker-compose"
+alias draq='docker rm $(docker ps-a -q)'
+
+
+
