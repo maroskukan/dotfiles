@@ -1,0 +1,24 @@
+# Dotfiles
+
+if [ -d "$HOME/dotfiles" ]; then
+  alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+fi
+
+# Generic Files and Apps
+
+if [ $(which nvim) ]; then
+  alias vim='nvim'
+fi
+
+if [ $(which exa) ]; then
+  alias ls='exa'
+fi
+
+if [ $(which feh) ] && [ -d "$HOME/Media/wallpapers" ]; then
+  alias wp="feh --bg-fill --randomize $HOME/Media/wallpapers"
+fi
+
+if [ $(which xclip) ]; then
+  alias setclip="xclip -selection c"
+  alias getclip="xclip -selection c -o"
+fi
