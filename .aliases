@@ -21,6 +21,10 @@ if [ $(which xclip) ]; then
   alias getclip="xclip -selection c -o"
 fi
 
+if [ $(which startx) ]; then
+  alias s="startx"
+fi
+
 # Strip comments
 alias eel='grep -v "^\s*[#\;]\|^\s*$"'
 
