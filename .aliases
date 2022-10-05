@@ -4,24 +4,24 @@ if [ -d "$HOME/dotfiles" ]; then
 fi
 
 # Generic Files and Apps
-if [ $(which nvim) ]; then
+if [ which nvim &>/dev/null ]; then
   alias vim='nvim'
 fi
 
-if [ $(which exa) ]; then
+if [ which exa &>/dev/null ]; then
   alias ls='exa'
 fi
 
-if [ $(which feh) ] && [ -d "$HOME/Media/wallpapers" ]; then
+if [ which feh &>/dev/null ] && [ -d "$HOME/Media/wallpapers" ]; then
   alias wp="feh --bg-fill --randomize $HOME/Media/wallpapers"
 fi
 
-if [ $(which xclip) ]; then
+if [ which xclip &>/dev/null ]; then
   alias setclip="xclip -selection c"
   alias getclip="xclip -selection c -o"
 fi
 
-if [ $(which startx) ]; then
+if [ which startx &>/dev/null ]; then
   alias s="startx"
 fi
 
