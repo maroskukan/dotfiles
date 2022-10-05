@@ -12,7 +12,11 @@
 " General settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
-set bg=dark
+set bg          =dark
+set tabstop     =2
+set softtabstop =2
+set shiftwidth  =2
+set expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom abbreviations
