@@ -1,27 +1,41 @@
+#  ___      ___  __   ___
+# |"  \    /"  ||/"| /  ") Maros Kukan
+#  \   \  //   |(: |/   /  https://buldogchef.com
+#  /\\  \/.    ||    __/   https://github.com/maroskukan
+# |: \.        |(// _  \
+# |.  \    /:  ||: | \  \
+# |___|\__/|___|(__|  \__)
+#
+# My favorite aliases which are can be sourced from shell rc file
+#
+# if [ -f "$HOME/.aliases" ]; then
+#   source $HOME/.aliases
+# fi
+
 # Dotfiles
 if [ -d "$HOME/dotfiles" ]; then
   alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 fi
 
 # Generic Files and Apps
-if [ which nvim &>/dev/null ]; then
+if which nvim &>/dev/null; then
   alias vim='nvim'
 fi
 
-if [ which exa &>/dev/null ]; then
-  alias ls='exa'
+if which exa &>/dev/null; then
+  alias ls='exa --icons'
 fi
 
-if [ which feh &>/dev/null ] && [ -d "$HOME/Media/wallpapers" ]; then
+if which feh &>/dev/null && [ -d "$HOME/Media/wallpapers" ]; then
   alias wp="feh --bg-fill --randomize $HOME/Media/wallpapers"
 fi
 
-if [ which xclip &>/dev/null ]; then
+if which xclip &>/dev/null; then
   alias setclip="xclip -selection c"
   alias getclip="xclip -selection c -o"
 fi
 
-if [ which startx &>/dev/null ]; then
+if which startx &>/dev/null; then
   alias s="startx"
 fi
 
