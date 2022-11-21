@@ -32,7 +32,7 @@ trim_at = "."
 disabled = false
 
 [directory]
-truncation_length = 1
+truncation_length = 2
 truncation_symbol = "…/"
 home_symbol = " ~"
 read_only_style = "197"
