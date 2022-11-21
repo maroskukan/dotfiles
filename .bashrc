@@ -10,10 +10,14 @@ if [ -f "$HOME/.aliases" ]; then
   source $HOME/.aliases
 fi
 
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 
 # Starship prompt configuration
 if [ -f ~/.config/starship.sh ]; then
   source ~/.config/starship.sh
   eval "$(starship init bash)"
+fi
+
+if [ -f "/etc/profile.d/bash_completion.sh" ]; then
+  source /etc/profile.d/bash_completion.sh
 fi
