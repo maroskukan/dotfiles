@@ -3,6 +3,9 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+# Default timeout is 500ms
+command_timeout = 750
+
 # Prompt format
 format = """$env_var $all"""
 
