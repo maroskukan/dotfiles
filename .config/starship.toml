@@ -77,3 +77,8 @@ python_binary = "python3"
 [kubernetes]
 format = 'on [ $context\($namespace\)](bold purple) '
 disabled = false
+
+[container]
+style = "bold white dimmed"
+format = "[$symbol]($style) "
+disabled = true
