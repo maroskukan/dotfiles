@@ -26,6 +26,16 @@ if [ -f "$HOME/.pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv" ]; then
 fi
 
 
+# Custom configuration for Vagrant
+kernel=$(uname -r) 
+if [[ "$kernel" == *"WSL2"* && -f "/usr/sbin/vagrant" ]]; then
+  #default_user=$(powershell.exe -c '$env:UserName' | awk '{print tolower($0)}')
+  export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/maros_kukan"
+  export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
+  export VAGRANT_DEFAULT_PROVIDER=hyperv
+fi
+
+
 # Starship prompt configuration
 if [ -f ~/.config/starship.sh ]; then
   source ~/.config/starship.sh
