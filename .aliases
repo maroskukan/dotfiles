@@ -62,7 +62,7 @@ alias vss="vagrant ssh"
 # Aliases for Docker
 alias dcpsa="docker container ps -a"
 alias d-c="docker-compose"
-alias draq='docker rm $(docker ps-a -q)'
+alias draq='docker rm $(docker ps -a -q)'
 
 
 
