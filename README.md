@@ -1,5 +1,10 @@
 # Dotfiles
 
+## Requirements
+
+In order to enjoy full terminal experience I highly recommend to install one of the [Nerd Fonts](https://www.nerdfonts.com/). I currently use `JetBrainsMono Nerd Font`.
+
+
 ## Usage
 
 Fork this repository and follow the steps below:
@@ -9,14 +14,14 @@ Create a new .dotfiles directory and initialize a bare repository.
 mkdir -p $HOME/dotfiles && git init --bare $_
 ```
 
-> **Note**: To make your life easier, ensure that the initial branch name is `main` by using `git config --global init.defaultBranch main`
+> **Note**: To make your life easier, ensure that the initial branch name is `main` by using `git config --global init.defaultBranch main`.
 
 Create a runtime alias.
 ```bash
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 ```
 
-Optionally hide untracked files
+Optionally hide untracked files.
 ```bash
 config config --local status.showUntrackedFiles no
 ```
