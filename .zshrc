@@ -4,7 +4,7 @@ ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
 #Plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting ssh-agent z)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting z)
 source $ZSH/oh-my-zsh.sh
 
 
