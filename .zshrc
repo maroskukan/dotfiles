@@ -28,11 +28,14 @@ fi
 
 # Custom configuration for Vagrant
 kernel=$(uname -r) 
-if [[ "$kernel" == *"WSL2"* && -f "/usr/sbin/vagrant" ]]; then
+chkvag=$(which vagrant)
+if [[ "$kernel" == *"WSL2"* && -f $chkvag ]]; then
   #default_user=$(powershell.exe -c '$env:UserName' | awk '{print tolower($0)}')
   export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/Users/maros_kukan"
   export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS=1
   export VAGRANT_DEFAULT_PROVIDER=hyperv
+  # Enable forwarding between WSL network and Default Hyper-V Switch
+  powershell.exe -c "Get-NetIPInterface | where {\$_.InterfaceAlias -eq 'vEthernet (WSL)' -or \$_.InterfaceAlias -eq 'vEthernet (Default Switch)'} | Set-NetIPInterface -Forwarding Enabled 2> \$null"
 fi
 
 
