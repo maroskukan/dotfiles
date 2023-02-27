@@ -17,7 +17,8 @@ fi
 # Custom configuration for pyenv
 if [ -f "$HOME/.pyenv/bin/pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
-  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  command -v pyenv >/dev/null
   eval "$(pyenv init -)"
 fi
 if [ -f "$HOME/.pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv" ]; then
