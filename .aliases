@@ -64,5 +64,8 @@ alias dcpsa="docker container ps -a"
 alias d-c="docker-compose"
 alias draq='docker rm $(docker ps -a -q)'
 
-
-
+# Aliases and completions for K8s
+if [ -f "/etc/bash_completion.d/kubectl" ]; then
+  alias k="kubectl"
+  complete -o default -F __start_kubectl k
+fi
