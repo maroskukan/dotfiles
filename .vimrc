@@ -32,3 +32,9 @@ abbr _sh #!/usr/bin/env bash
 " Custom shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-N> :set invnumber<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom autocmds
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType yaml setlocal ai et ts=2 sw=2 nu cuc
+
