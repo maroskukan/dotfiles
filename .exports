@@ -1,0 +1,21 @@
+#  ___      ___  __   ___
+# |"  \    /"  ||/"| /  ") Maros Kukan
+#  \   \  //   |(: |/   /  https://buldogchef.com
+#  /\\  \/.    ||    __/   https://github.com/maroskukan
+# |: \.        |(// _  \
+# |.  \    /:  ||: | \  \
+# |___|\__/|___|(__|  \__)
+#
+# My favorite exports which are can be sourced from shell rc file
+#
+# if [ -f "$HOME/.exports" ]; then
+#   source $HOME/.exports
+# fi
+
+# Generic Files and Apps
+export EDITOR=$(which vim)
+
+# This prevents less from clearing up the screen
+# E.g. for manpages
+export LESS='-X'
+

@@ -13,6 +13,10 @@ if [ -f "$HOME/.aliases" ]; then
   source $HOME/.aliases
 fi
 
+# Custom shared exports
+if [ -f "$HOME/.exports" ]; then
+  source $HOME/.exports
+fi
 
 # Custom configuration for pyenv
 if [ -f "$HOME/.pyenv/bin/pyenv" ]; then

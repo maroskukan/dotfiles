@@ -10,6 +10,11 @@ if [ -f "$HOME/.aliases" ]; then
   source $HOME/.aliases
 fi
 
+# Custom shared exports
+if [ -f "$HOME/.exports" ]; then
+  source $HOME/.exports
+fi
+
 #PS1='[\u@\h \W]\$ '
 
 # Starship prompt configuration
