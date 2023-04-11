@@ -12,6 +12,9 @@
 #   source $HOME/.exports
 # fi
 
+# Path Customization
+export PATH="$HOME/go/bin:$PATH"
+
 # Generic Files and Apps
 export EDITOR=$(which vim)
 
