@@ -18,6 +18,10 @@ if [ -d "$HOME/dotfiles" ]; then
 fi
 
 # Generic Files and Apps
+if which dasel &>/dev/null; then
+  alias ds='dasel'
+fi
+
 if which nvim &>/dev/null; then
   alias vim='nvim'
 fi
