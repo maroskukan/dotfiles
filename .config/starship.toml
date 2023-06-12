@@ -4,7 +4,7 @@
 add_newline = true
 
 # Default timeout is 500ms
-command_timeout = 750
+command_timeout = 800
 
 # Prompt format
 format = """$env_var $all"""
