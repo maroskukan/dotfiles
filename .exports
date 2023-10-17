@@ -20,5 +20,5 @@ export EDITOR=$(which vim)
 
 # This prevents less from clearing up the screen
 # E.g. for manpages
-export LESS='-X'
+export LESS='-XFR'
 
