@@ -56,6 +56,11 @@ alias ap="ansible-playbook"
 alias acl="ansible-config list"
 alias ail="ansible-inventory --list"
 alias aig="ansible-inventory --graph"
+alias anr="ansible-navigator run --mode stdout"
+alias ansc="ansible-navigator run --mode stdout --syntax-check"
+alias ancd="ansible-navigator config dump --mode stdout"
+alias anv="ansible-navigator --version"
+alias anig="ansible-navigator inventory --graph"
 
 # Aliases for Vagrant
 alias vs="vagrant status"
