@@ -79,6 +79,9 @@ if [ -f "/etc/bash_completion.d/kubectl" ]; then
   complete -o default -F __start_kubectl k
 fi
 
+# Aliases for life improvement
+alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
+
 # Functions for Medusa
 function medusa(){
   docker run   \
