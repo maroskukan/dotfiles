@@ -17,6 +17,12 @@ fi
 
 #PS1='[\u@\h \W]\$ '
 
+# Set history - size
+export HISTSIZE=10000
+
+# Set history - timestamps
+export HISTTIMEFORMAT="%F %T "
+
 # Starship prompt configuration
 if [ -f ~/.config/starship.sh ]; then
   source ~/.config/starship.sh
