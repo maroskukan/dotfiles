@@ -78,3 +78,15 @@ if [ -f "/etc/bash_completion.d/kubectl" ]; then
   alias k="kubectl"
   complete -o default -F __start_kubectl k
 fi
+
+# Functions for Medusa
+function medusa(){
+  docker run   \
+    -v $(pwd):/tmp/output/  \
+    -w /tmp/output/ \
+    --user $(id -u):$(id -u)  \
+    -e VAULT_ADDR=$VAULT_ADDR \
+    -e VAULT_TOKEN=$VAULT_TOKEN  \
+    -e VAULT_SKIP_VERIFY=$VAULT_SKIP_VERIFY  \
+    ghcr.io/jonasvinther/medusa:latest "$@"
+}
