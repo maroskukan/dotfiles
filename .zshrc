@@ -48,3 +48,9 @@ if [ -f ~/.config/starship.sh ]; then
   source ~/.config/starship.sh
   eval "$(starship init zsh)"
 fi
+
+# Direnv shell integration
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi
+

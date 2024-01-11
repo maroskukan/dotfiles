@@ -43,3 +43,8 @@ if [ -f "$HOME/.pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv" ]; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# Direnv shell integration
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook bash)"
+fi
