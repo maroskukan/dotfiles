@@ -85,11 +85,31 @@ alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 # Functions for Medusa
 function medusa(){
   docker run   \
+    -v $(pwd):/tmp/output/ \
+    -w /tmp/output/ \
+    --user $(id -u):$(id -u) \
+    -e VAULT_ADDR=$VAULT_ADDR \
+    -e VAULT_TOKEN=$VAULT_TOKEN \
+    -e VAULT_SKIP_VERIFY=$VAULT_SKIP_VERIFY \
+    ghcr.io/jonasvinther/medusa:latest "$@"
+}
+
+# Functions for VMware tools
+function govc(){
+  docker run   \
+    --rm \
+    -it \
+    -v $(pwd):/tmp/output/ \
+    -w /tmp/output/ \
+    -e GOVC_URL=$GOVC_URL \
+    -e GOVC_INSECURE=$GOVC_INSECURE \
+    vmware/govc:latest /govc "$@"
+}
+
+function vcsim(){
+  docker run   \
     -v $(pwd):/tmp/output/  \
     -w /tmp/output/ \
-    --user $(id -u):$(id -u)  \
-    -e VAULT_ADDR=$VAULT_ADDR \
-    -e VAULT_TOKEN=$VAULT_TOKEN  \
-    -e VAULT_SKIP_VERIFY=$VAULT_SKIP_VERIFY  \
-    ghcr.io/jonasvinther/medusa:latest "$@"
+    -p 9090:9090 \
+    vmware/vcsim:latest -l :9090 "$@"
 }
