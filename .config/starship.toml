@@ -78,7 +78,9 @@ symbol = " "
 python_binary = "python3"
 
 [kubernetes]
-format = 'on [ $context\($namespace\)](bold purple) '
+symbol = "⎈ " 
+format = 'on [$symbol$context\($namespace\)](bold purple) '
+detect_files = ["k8s"]
 disabled = false
 
 [container]
