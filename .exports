@@ -12,8 +12,14 @@
 #   source $HOME/.exports
 # fi
 
-# Path Customization
-export PATH="$HOME/go/bin:$PATH"
+# Path Customization for apps
+if [ -d "$HOME/go/bin" ] ; then
+  export PATH="$HOME/go/bin:$PATH"
+fi
+
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
 
 # Generic Files and Apps
 export EDITOR=$(which vim)
@@ -21,4 +27,3 @@ export EDITOR=$(which vim)
 # This prevents less from clearing up the screen
 # E.g. for manpages
 export LESS='-XFR'
-
