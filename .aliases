@@ -27,7 +27,7 @@ if which nvim &>/dev/null; then
 fi
 
 if which exa &>/dev/null; then
-  alias ls='exa --icons'
+  alias ls='eza --icons'
 fi
 
 if which feh &>/dev/null && [ -d "$HOME/Media/wallpapers" ]; then
