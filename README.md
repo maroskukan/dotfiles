@@ -9,14 +9,17 @@ In order to enjoy full terminal experience I highly recommend to install one of 
 version=$(curl --silent "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" | jq -r .'tag_name')
 
 # Create font directory
-mkdir -pv $HOME/.local/share/fonts
+mkdir -pv ${HOME}/.local/share/fonts/JetBrainsMono
 
 # Download and extract the font collection
 curl -sLO https://github.com/ryanoasis/nerd-fonts/releases/download/${version}/JetBrainsMono.zip
-unzip JetBrainsMono.zip -d ${HOME}/.local/share/fonts
+unzip JetBrainsMono.zip -d ${HOME}/.local/share/fonts/JetBrainsMono/
 
 # Rebuild font cache
 fc-cache -f -v
+
+# Cleanup
+rm -rf JetBrainsMono.zip
 ```
 
 ## Usage
