@@ -4,6 +4,20 @@
 
 In order to enjoy full terminal experience I highly recommend to install one of the [Nerd Fonts](https://www.nerdfonts.com/). I currently use `JetBrainsMono Nerd Font`.
 
+```bash
+# Retrieve the latest version
+version=$(curl --silent "https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest" | jq -r .'tag_name')
+
+# Create font directory
+mkdir -pv $HOME/.local/share/fonts
+
+# Download and extract the font collection
+curl -sLO https://github.com/ryanoasis/nerd-fonts/releases/download/${version}/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d ${HOME}/.local/share/fonts
+
+# Rebuild font cache
+fc-cache -f -v
+```
 
 ## Usage
 
