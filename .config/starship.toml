@@ -87,3 +87,9 @@ disabled = false
 style = "bold white dimmed"
 format = "[$symbol]($style) "
 disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
