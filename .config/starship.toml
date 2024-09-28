@@ -89,6 +89,7 @@ format = "[$symbol]($style) "
 disabled = true
 
 [aws]
+symbol = "  "
 disabled = true
 
 [gcloud]

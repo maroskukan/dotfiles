@@ -27,3 +27,7 @@ export EDITOR=$(which vim)
 # This prevents less from clearing up the screen
 # E.g. for manpages
 export LESS='-XFR'
+
+# This fixes unicode char rendering in less and bat
+# https://github.com/sharkdp/bat/issues/2578
+export LESSUTFCHARDEF=E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p
