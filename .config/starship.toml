@@ -94,3 +94,6 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[terraform]
+format = 'via [$symbol$workspace $version]($style) '
