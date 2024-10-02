@@ -73,6 +73,10 @@ alias dcpsa="docker container ps -a"
 alias d-c="docker-compose"
 alias draq='docker rm $(docker ps -a -q)'
 
+# Aliases for Kubernetes
+alias k="kubectl"
+alias kns="kubectl config set-context --current --namespace"
+
 # Aliases and completions for K8s
 if [ -f "/etc/bash_completion.d/kubectl" ]; then
   alias k="kubectl"
