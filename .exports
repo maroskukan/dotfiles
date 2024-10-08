@@ -14,7 +14,9 @@
 
 # Path Customization for apps
 if [ -d "$HOME/go/bin" ] ; then
-  export PATH="$HOME/go/bin:$PATH"
+  export GOROOT="$HOME/go"
+  export PATH="$GOROOT:$PATH"
+  #export PATH="$HOME/go/bin:$PATH"
 fi
 
 if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
