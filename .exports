@@ -14,8 +14,9 @@
 
 # Path Customization for apps
 if [ -d "$HOME/go/bin" ] ; then
-  export GOROOT="$HOME/go/bin"
-  export PATH="$GOROOT:$PATH"
+  export GOROOT="$HOME/go"
+  export GOPATH="$GOROOT/bin"
+  export PATH="$GOPATH:$PATH"
   #export PATH="$HOME/go/bin:$PATH"
 fi
 
