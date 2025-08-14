@@ -86,6 +86,9 @@ fi
 # Aliases for life improvement
 alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 
+# Aliases for gemini
+alias g="gemini"
+
 # Functions for Medusa
 function medusa(){
   docker run   \
