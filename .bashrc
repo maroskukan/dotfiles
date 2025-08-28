@@ -10,6 +10,11 @@ if [ -f "$HOME/.aliases" ]; then
   source $HOME/.aliases
 fi
 
+# Custom private aliases
+if [ -f "$HOME/.privatealiases" ]; then
+  source $HOME/.privatealiases
+fi
+
 # Custom shared exports
 if [ -f "$HOME/.exports" ]; then
   source $HOME/.exports
