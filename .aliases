@@ -89,6 +89,10 @@ alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 # Aliases for gemini
 alias g="gemini"
 
+# Aliases for terraform
+alias tp="terraform plan"
+alias ta="terraform apply"
+
 # Functions for Medusa
 function medusa(){
   docker run   \
