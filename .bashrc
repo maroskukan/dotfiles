@@ -28,6 +28,9 @@ export HISTSIZE=10000
 # Set history - timestamps
 export HISTTIMEFORMAT="%F %T "
 
+# Set history - ignore commands that start with space
+export HISTCONTROL=ignorespace
+
 # Starship prompt configuration
 if [ -f ~/.config/starship.sh ]; then
   source ~/.config/starship.sh
@@ -48,6 +51,9 @@ if [ -f "$HOME/.pyenv/plugins/pyenv-virtualenv/bin/pyenv-virtualenv" ]; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# Custom configuration for tfswitch
+command -v terraform >/dev/null || export PATH="$HOME/bin:$PATH"
 
 # Direnv shell integration
 if command -v direnv &> /dev/null; then
