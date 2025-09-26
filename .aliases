@@ -90,8 +90,12 @@ alias pastebin="curl -F 'sprunge=<-' http://sprunge.us"
 alias g="gemini"
 
 # Aliases for terraform
+alias tfmt="terraform fmt"
+alias tval="terraform validate"
 alias tp="terraform plan"
 alias ta="terraform apply"
+alias td="terraform destroy"
+alias to="terraform output"
 
 # Functions for Medusa
 function medusa(){
